@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-right: 0.1rem;
+  align-items: center;
+  padding: 1.3rem;
+  justify-content: space-between;
+}
+.content {
+  width: 100%;
+}
+.header1 {
+  justify-content: center;
+  align-items: center;
+  border-bottom-style: solid;
+  border-width: initial;
+  border-color: rgba(3, 161, 53, 0.837);
+  margin-bottom: 0.2rem;
+}
+.header2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-bottom-style: solid;
+  border-width: initial;
+  border-color: rgba(3, 161, 53, 0.837);
+  margin-bottom: 0.2rem; */
+  margin-bottom: 0.3rem;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 0.4rem;
+}
+.icons path {
+  color: rgba(3, 161, 53, 0.837);
+}
+
+.header2 {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.header2 path {
+  color: rgba(3, 161, 53, 0.837);
+}
+
+h1 {
+  color: rgb(9, 2, 2);
+}
+.leftNav {
+  width: 100%;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+.leftNav::-webkit-scrollbar {
+  width: 8px;
+}
+.leftNav::-webkit-scrollbar-thumb {
+  background-color: #6b6b6b;
+  border-radius: 3px;
+}
+.leftNav::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.link {
+  display: flex;
+  margin: 1rem;
+  align-items: center;
+  text-decoration: none;
+}
+.logoutDiv {
+  margin-top: 1rem;
+  display: flex;
+  border-top-style: solid;
+  border-width: initial;
+  border-color: rgba(3, 161, 53, 0.837);
+  width: 100%;
+  margin-bottom: 1rem;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.logoutBtn {
+  border-radius: 0.7rem;
+  padding: 0.5rem;
+  width: 8rem;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.73);
+  background-color: rgba(3, 161, 53, 0.837);
+  &:hover {
+    background-color: rgba(250, 248, 248, 0.837);
+    color: rgba(3, 161, 53, 0.837);
+    box-shadow: 1px 1px 10px rgba(3, 161, 53, 0.837);
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    transition: 0.2s;
+    transform: scale(1.1);
+  }
+  transition: ease-out 0.2s;
+}
+.icon {
+  color: #007bff; /* Set your desired icon color */
+  margin-left: 5px; /* Add margin to the left of the icons if needed */
+  /* Add any other styles specific to your icons */
+}

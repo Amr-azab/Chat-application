@@ -1,0 +1,20 @@
+.headerOn,
+.headerOff {
+  display: flex;
+  flex-direction: column;
+  background-color: #138d64c7;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-shadow: 1px 1px 10px 0px rgba(159, 233, 219, 0.489);
+}
+.headerOff {
+  box-shadow: 1px 1px 10px 0px rgba(235, 152, 152, 0.489);
+}
+.name {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.status {
+  color: rgb(56, 53, 53);
+}

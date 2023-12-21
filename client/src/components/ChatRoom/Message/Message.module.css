@@ -1,0 +1,52 @@
+.containerSender,
+.containerReceiver {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.containerReceiver {
+  justify-content: flex-start;
+}
+
+.messageSender,
+.messageReceiver {
+  margin-bottom: 1rem;
+  background-color: rgba(0, 255, 208, 0.837);
+  max-width: 60%;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* line-height: 1.5; */
+  gap: 0.2rem;
+}
+.messageSender {
+  border-bottom-right-radius: 0rem;
+  .text {
+    color: rgb(0, 0, 0);
+  }
+}
+
+.messageReceiver {
+  background-color: rgba(85, 85, 85, 0.875);
+  border-bottom-left-radius: 0rem;
+}
+
+.text {
+  word-break: break-word;
+}
+.messageSender {
+  .time {
+    color: rgb(47, 47, 47);
+    font-size: 0.7rem;
+    /* padding-top: 0.2rem; */
+    align-self: flex-end;
+  }
+}
+.messageReceiver {
+  .time {
+    color: rgba(0, 255, 208, 0.868);
+    font-size: 0.7rem;
+    padding: 0;
+  }
+}
