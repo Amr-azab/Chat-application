@@ -79,7 +79,7 @@ export const LeftNav: FC<LeftNavProps> = () => {
       <div className={classes.content}>
         <div className={classes.header1}>
           <div className={classes.header2}>
-            <h1>Chats </h1>
+            <h1>ChatWorld </h1>
             <RiEarthFill size={40} />
           </div>
           <div className={classes.icons}>

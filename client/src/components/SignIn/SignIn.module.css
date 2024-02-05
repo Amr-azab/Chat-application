@@ -44,13 +44,13 @@
 }
 
 .Login {
-  background-color: rgba(0, 255, 208, 0.837);
+  background-color: green;
   border: none;
   padding: 1rem;
   border-radius: 5rem;
   font-weight: bold;
   font-size: 1rem;
-  color: rgb(50, 50, 50);
+  color: rgb(255, 252, 252);
   /* color: transparent; */
 
   &:hover {
@@ -68,13 +68,13 @@
 }
 
 p {
-  color: white;
+  color: rgb(32, 29, 29);
 }
 
 .link {
-  color: rgba(93, 255, 228, 0.837);
+  color: rgba(45, 163, 143, 0.837);
   &:hover {
-    color: rgba(9, 255, 210, 0.579);
+    color: green;
   }
 }
 

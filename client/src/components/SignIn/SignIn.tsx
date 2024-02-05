@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import classes from "./SignIn.module.css";
 import { Link } from "react-router-dom";
-import { RiChatSmileFill } from "react-icons/ri";
+import { RiEarthFill } from "react-icons/ri";
 import instance from "../../instance";
 import { useUserIdStore } from "../../store/userStorge";
 import { LinearProgress } from "@mui/material";
@@ -61,8 +61,8 @@ export const SignIn: FC<SignInProps> = (props) => {
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-        <h1> Welcome To Chatify </h1>
-        <RiChatSmileFill size={50} />
+        <h1> Welcome To ChatWorld </h1>
+        <RiEarthFill size={40} style={{ fill: "green" }} />
       </div>
       {isLoading && (
         <div className={classes.loading}>

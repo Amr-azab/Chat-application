@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import classes from "./SignUp.module.css";
-import { RiChatSmileFill } from "react-icons/ri";
+import { RiEarthFill } from "react-icons/ri";
 import instance from "../../instance";
 import { useUserIdStore } from "../../store/userStorge";
 import { LinearProgress } from "@mui/material";
@@ -92,9 +92,9 @@ export const SignUp: FC<SignUpProps> = () => {
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-        <h1> Chatify </h1>
+        <h1> ChatWorld </h1>
 
-        <RiChatSmileFill size={50} />
+        <RiEarthFill size={40} style={{ fill: "green" }} />
       </div>
       {isLoading && (
         <div className={classes.loading}>
