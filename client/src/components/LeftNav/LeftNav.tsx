@@ -8,6 +8,7 @@ import {
   RiCameraFill,
   RiSearchLine,
   RiSettings3Line,
+  RiDoorOpenLine,
 } from "react-icons/ri";
 import instance from "../../instance";
 import { useUserIdStore } from "../../store/userStorge";
@@ -98,7 +99,16 @@ export const LeftNav: FC<LeftNavProps> = () => {
             </>
             <RiCameraFill size={20} />
             <RiSearchLine size={20} />
-            <RiSettings3Line size={20} />
+            <button
+              onClick={logOutHandler}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              <RiDoorOpenLine size={20} />
+            </button>
           </div>
         </div>
 
@@ -119,11 +129,11 @@ export const LeftNav: FC<LeftNavProps> = () => {
         </div>
       </div>
 
-      <div className={classes.logoutDiv}>
+      {/* <div className={classes.logoutDiv}>
         <button className={classes.logoutBtn} onClick={logOutHandler}>
           Log out
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
