@@ -92,7 +92,7 @@ export const SignUp: FC<SignUpProps> = () => {
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-        <h1> ChatWorld </h1>
+        <h1 className={classes.title}> ChatWorld </h1>
 
         <RiEarthFill size={40} style={{ fill: "green" }} />
       </div>

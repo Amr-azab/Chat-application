@@ -5,7 +5,7 @@
   width: 100%;
   height: 90vh;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .header {
@@ -13,9 +13,9 @@
   gap: 0.5rem;
 }
 
-.header path {
+/* .header path {
   color: rgba(0, 255, 208, 0.837);
-}
+} */
 
 .inputs {
   display: flex;
@@ -28,7 +28,7 @@
 .email,
 .password {
   width: 20%;
-  padding: 1rem;
+  padding: 0.8rem;
   margin-bottom: 1rem;
   border: none;
   font-size: 1.3rem;
@@ -51,7 +51,7 @@
   padding: 1rem;
   border-radius: 5rem;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: rgb(255, 252, 252);
 
   &:hover {
@@ -65,7 +65,27 @@
 }
 .errorMsg {
   background-color: rgba(255, 0, 0, 0.73);
-  padding: 0.8rem;
+  padding: 0.5rem;
   border-radius: 5rem;
   border-bottom-left-radius: 0rem;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .email,
+  .password {
+    width: 40%;
+    padding: 0.6rem;
+    font-size: 0.6rem;
+  }
+  .title {
+    font-size: 1.4rem;
+  }
+  .signup {
+    padding: 0.8rem;
+    font-size: 0.6rem;
+    width: 7rem;
+  }
+  .errorMsg {
+    padding: 0.5rem;
+  }
 }

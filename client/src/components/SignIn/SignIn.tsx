@@ -61,8 +61,8 @@ export const SignIn: FC<SignInProps> = (props) => {
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-        <h1> Welcome To ChatWorld </h1>
-        <RiEarthFill size={40} style={{ fill: "green" }} />
+        <h1 className={classes.Welcometitle}> Welcome To ChatWorld </h1>
+        <RiEarthFill size={30} style={{ fill: "green" }} />
       </div>
       {isLoading && (
         <div className={classes.loading}>

@@ -10,7 +10,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = (props) => {
     <div className={classes.container}>
       <div className={classes.header}>
         <h1>Welcome To ChatWorld </h1>
-        <RiEarthFill size={40} />
+        <RiEarthFill size={20} />
       </div>
       <h2>Start Chatting with The World</h2>
     </div>
