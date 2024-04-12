@@ -70,7 +70,7 @@
   border-bottom-left-radius: 0rem;
   margin: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .email,
   .password {
     width: 40%;

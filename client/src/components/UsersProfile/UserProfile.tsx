@@ -46,7 +46,7 @@ export const UserProfile: FC<UserProfileProps> = ({ name, status, id }) => {
         <p className={classes.userName}>{name}</p>
 
         <p className={classes.userMessage}>
-          {message.length > 30 ? message.slice(0, 30) + "..." : message}
+          {message.length > 20 ? message.slice(0, 20) + "..." : message}
         </p>
       </div>
     </div>

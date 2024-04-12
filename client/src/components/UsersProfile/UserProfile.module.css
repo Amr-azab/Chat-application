@@ -68,3 +68,29 @@
   display: flex;
   gap: 2rem;
 }
+
+@media screen and (max-width: 1200px) {
+  .userDetailsOn,
+  .userDetailsOff {
+    gap: 0.4rem;
+    padding: 0.4rem;
+  }
+
+  .photo {
+    background-color: rgb(69, 69, 69);
+    padding: 0.8rem;
+    border-radius: 5rem;
+  }
+
+  .userName {
+    font-size: 0.7rem;
+    margin: 0;
+    font-weight: bold;
+    color: rgb(11, 10, 10);
+  }
+  .userMessage {
+    font-size: 0.4rem;
+    margin: 10px 0 0 0;
+    color: rgb(20, 35, 11);
+  }
+}

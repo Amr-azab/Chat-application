@@ -93,7 +93,7 @@ p {
 .loading span {
   color: rgba(93, 255, 228, 0.837);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .email,
   .password {
     width: 40%;

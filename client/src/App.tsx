@@ -1,21 +1,19 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import classes from "./App.module.css";
+import React, { useEffect, useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { LinearProgress } from "@mui/material";
+import { useUserIdStore } from "./store/userStorge";
+import instance from "./instance";
 import { LeftNavLayout } from "./components/LeftNavLayout/LeftNavLayout";
 import { WelcomeScreen } from "./components/WelcomeScreen/WelcomeScreen";
 import { ChatRoom } from "./components/ChatRoom/ChatRoom";
-import { Routes, Route } from "react-router-dom";
 import { SignIn } from "./components/SignIn/SignIn";
 import { SignUp } from "./components/SignUp/SignUp";
-
-import { useUserIdStore } from "./store/userStorge";
-import instance from "./instance";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import { Navigate } from "react-router-dom";
-import { LinearProgress } from "@mui/material";
+import classes from "./App.module.css";
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isLeftNavVisible, setIsLeftNavVisible] = useState(true);
   const user = useUserIdStore((state) => state.userProfile);
   const setUser = useUserIdStore((state) => state.setUser);
 
@@ -35,8 +33,15 @@ const App: React.FC = () => {
     fetchUserHandler();
   }, []);
 
+  const toggleLeftNavVisibility = () => {
+    setIsLeftNavVisible((prev) => !prev);
+  };
+
   return (
     <div>
+      <button onClick={toggleLeftNavVisibility}>
+        {isLeftNavVisible ? ">>" : "<<"}
+      </button>
       {isLoading ? (
         <div className={classes.loading}>
           <LinearProgress color="inherit" />
@@ -53,7 +58,7 @@ const App: React.FC = () => {
           <Route
             element={
               <ProtectedRoute>
-                <LeftNavLayout />
+                <LeftNavLayout isVisible={isLeftNavVisible} />
               </ProtectedRoute>
             }
           >

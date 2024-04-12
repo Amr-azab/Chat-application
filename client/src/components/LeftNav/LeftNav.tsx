@@ -13,7 +13,7 @@ import {
 import instance from "../../instance";
 import { useUserIdStore } from "../../store/userStorge";
 import io from "socket.io-client";
-import ModelBox from "../../Box/BoxEdit";
+import ModelBox from "../Box/BoxEdit";
 
 export interface LeftNavProps {}
 
@@ -24,7 +24,7 @@ interface User {
   email: string;
   lastMessage: string;
 }
-const socket = io("http://localhost:8000");
+const socket = io("https://chat-application-3no9.onrender.com");
 
 export const LeftNav: FC<LeftNavProps> = () => {
   const navigate = useNavigate();
@@ -80,7 +80,7 @@ export const LeftNav: FC<LeftNavProps> = () => {
         <div className={classes.header1}>
           <div className={classes.header2}>
             <h1>ChatWorld </h1>
-            <RiEarthFill size={40} />
+            <RiEarthFill size={20} />
           </div>
           <div className={classes.icons}>
             <>

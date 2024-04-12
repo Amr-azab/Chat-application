@@ -108,3 +108,14 @@ h1 {
   margin-left: 5px; /* Add margin to the left of the icons if needed */
   /* Add any other styles specific to your icons */
 }
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 40%;
+    padding: 0.3rem;
+  }
+  .icons {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
