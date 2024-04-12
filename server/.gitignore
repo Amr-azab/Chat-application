@@ -1,2 +1,3 @@
 *.env
 environtment.d.ts
+/node_modules
