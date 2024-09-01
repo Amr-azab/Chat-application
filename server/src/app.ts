@@ -25,6 +25,7 @@ app.use(cookieParser());
 
 app.use("/api/chat-application/user", userRouter);
 app.use("/api/chat-application/room", roomRouter);
+app.use(express.static(`${__dirname}/build`));
 app.all("*", (req: Request, res: Response, next: NextFunction) => {
   res.sendFile(`${__dirname}/build/index.html`);
 });

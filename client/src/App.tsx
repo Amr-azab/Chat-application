@@ -39,49 +39,53 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <button onClick={toggleLeftNavVisibility}>
-        {isLeftNavVisible ? ">>" : "<<"}
-      </button>
       {isLoading ? (
         <div className={classes.loading}>
           <LinearProgress color="inherit" />
         </div>
       ) : (
-        <Routes>
-          {!user._id ? (
-            <>
-              <Route path="/sign-in" element={<SignIn />} />
-              <Route path="/sign-up" element={<SignUp />} />
-            </>
-          ) : null}
+        <>
+          {user._id && (
+            <button onClick={toggleLeftNavVisibility}>
+              {isLeftNavVisible ? ">>" : "<<"}
+            </button>
+          )}
+          <Routes>
+            {!user._id ? (
+              <>
+                <Route path="/sign-in" element={<SignIn />} />
+                <Route path="/sign-up" element={<SignUp />} />
+              </>
+            ) : null}
 
-          <Route
-            element={
-              <ProtectedRoute>
-                <LeftNavLayout isVisible={isLeftNavVisible} />
-              </ProtectedRoute>
-            }
-          >
             <Route
-              path="/"
-              index={true}
               element={
                 <ProtectedRoute>
-                  <WelcomeScreen />
+                  <LeftNavLayout isVisible={isLeftNavVisible} />
                 </ProtectedRoute>
               }
-            />
-            <Route
-              path="/user/:receiverId"
-              element={
-                <ProtectedRoute>
-                  <ChatRoom />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Route>
-        </Routes>
+            >
+              <Route
+                path="/"
+                index={true}
+                element={
+                  <ProtectedRoute>
+                    <WelcomeScreen />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/user/:receiverId"
+                element={
+                  <ProtectedRoute>
+                    <ChatRoom />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Route>
+          </Routes>
+        </>
       )}
     </div>
   );

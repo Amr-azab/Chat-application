@@ -22,6 +22,7 @@ app.use(express_1.default.json());
 app.use((0, cookie_parser_1.default)());
 app.use("/api/chat-application/user", userRoutes_1.router);
 app.use("/api/chat-application/room", roomRoutes_1.router);
+app.use(express_1.default.static(`${__dirname}/build`));
 app.all("*", (req, res, next) => {
     res.sendFile(`${__dirname}/build/index.html`);
 });

@@ -11,7 +11,7 @@ import { LinearProgress } from "@mui/material";
 import WhatsAppWall from "../../pages/whatsappWall.jpg";
 export interface ChatRoomProps {}
 
-const socket = io("https://chat-application-3no9.onrender.com");
+const socket = io("http://localhost:8000");
 
 interface IMessage {
   text: string;

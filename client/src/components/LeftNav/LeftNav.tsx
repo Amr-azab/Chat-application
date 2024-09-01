@@ -24,7 +24,7 @@ interface User {
   email: string;
   lastMessage: string;
 }
-const socket = io("https://chat-application-3no9.onrender.com");
+const socket = io("http://localhost:8000");
 
 export const LeftNav: FC<LeftNavProps> = () => {
   const navigate = useNavigate();
